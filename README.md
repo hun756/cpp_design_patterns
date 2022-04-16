@@ -1,1 +1,1 @@
-# cpp_idioms
+# C++ Design Patterns
