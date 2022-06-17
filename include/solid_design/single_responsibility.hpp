@@ -53,11 +53,18 @@ namespace SolidDesign
         std::string title;
         std::vector<std::string> entries;
     };
-    
+
 
     class PersistenceManager
     {
     public:
+        /**
+         * @brief 
+         *  Save helper for journal
+         * 
+         * @param j 
+         * @param fileName 
+         */
         static void save(const Journal& j, const std::string& fileName)
         {
             std::ofstream out {fileName};
