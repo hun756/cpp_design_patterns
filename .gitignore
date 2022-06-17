@@ -33,6 +33,8 @@
 
 # ide
 .vs/
+.ide/
+.vscode/
 
 # clang-d cache
 .cache/
