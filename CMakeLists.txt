@@ -77,6 +77,15 @@ add_dependencies(main.x engine)       # main.cpp uses the 'engine', add dep.
 target_link_libraries(main.x engine)  # Link the executable to the 'engine'.
 
 
+# --------------------------------------------------------------------------------
+#                            Add Boost! (Change as needed)
+# --------------------------------------------------------------------------------
+find_package( Boost REQUIRED COMPONENTS program_options regex )
+include_directories( ${Boost_INCLUDE_DIRS} )
+add_executable(run app/main.cpp ) # Example application based on main.cpp
+
+# Alternatively you could use ${Boost_LIBRARIES} here.
+target_link_libraries( run ${Boost_LIBRARIES})
 
 # --------------------------------------------------------------------------------
 #                         Make Tests (no change needed).
